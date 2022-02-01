@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Cheesecake Order Form</title>
+
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+        </script>
+        <script src="javascripts/script.js"></script>
+    </head>
+    <body>
+        <!-- grid system created -->
+        <div class="grid-container">
+
+            <!-- container for image and header -->
+            <div class="page-title">
+                <h1>Cheesecake Order Form</h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/1200px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" width="400" height="300">
+                <h3>Quantity Topping</h3>
+            </div>
+
+            <!-- container created to get drop down and radio btn side by side -->
+            <div id="to-hide" class="quantity-topping">
+                
+                <div class="drop-down">
+                    <select id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="radio-btn">
+                    <input type="radio" name="radio-tpg" value="Plain">
+                    <label for="plain">Plain</label><br>
+                    <input type="radio" name="radio-tpg" value="Cherry">
+                    <label for="cherry">Cherry</label><br>
+                    <input type="radio" name="radio-tpg" value="Chocolate">
+                    <label for="chocolate">chocolate</label><br>
+                </div>
+
+            </div>
+
+            <!-- user input container for textarea and submit btn-->
+            <div class="user-input">
+                <label for="textarea">Notes:</label><br>
+                <textarea class="input" id="textarea" row="4" col="50">
+                   Enter special instructions here.
+                </textarea><br>
+                <button id="submit" onclick="order()">Order</button><br>
+
+            </div>
+
+            <!--container for when the submit button is completed-->
+            <div id="to-show1" class="thank-you">
+                <h3>Thank you! Your order has been placed</h3><br>
+                <span class="quantity-val">2</span>
+                <span class="topping-val">plain</span><br>
+                <span class="note-val">notes</span>
+
+            </div>
+            <div id="to-show2" class="blank"></div>
+            
+            <!--total order container for previous orders-->
+            <div class="total-order">
+                <h3>Orders for </h3>
+                <select id="month" class="month">
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sep">Sep</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                </select>
+                </div> <br>
+                <ul>
+                    <li>11 Cherry</li>
+                    <li>17 Chocolate</li>
+                    <li>31 Plain</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+
